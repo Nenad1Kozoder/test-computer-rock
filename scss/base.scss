@@ -1,0 +1,350 @@
+/* Scss Document */
+
+$white-color: #fff;
+$black-color: #000;
+$gray-color: #3B454A;
+$light-gray-color: #55626c;
+$dark-color: #374047;
+$purple-color: #6834ba;
+$dark-purple-color: #592c9e;
+$gray-color: #3c444a;
+$green-color: #009688;
+$light-green-color: #47b04b;
+$yellow-color: #ffc200;
+$yellow2-color: #ffed19;
+$dark-yellow-color: #594403;
+$red-color: #ec1561;
+$orange-color: #ff5607;
+$light-blue-color: #00bcd5;
+$blue-color: #00bcd5;
+$blue2-color: #00a8f7;
+$brown-color: #795546;
+html {
+    scroll-behavior: smooth;
+}
+
+button:focus {
+    outline: none;
+}
+
+img {
+    width: auto;
+    height: auto;
+    
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin border-radius-right($radius) {
+    -moz-border-radius-topright: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-right-bottom($radius) {
+    -moz-border-radius-bottomright: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-left-top($radius) {
+    -moz-border-radius-topleft: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin border-radius-left($radius) {
+    -moz-border-radius-topleft: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin linearGradient($top,
+$bottom) {
+    background: $top;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+    /* W3C */
+}
+
+a {
+    @include transition(all 0.3s);
+}
+
+.shadow {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-gray {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-white {
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.3);
+    box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.required {
+    border: 1px solid red;
+}
+
+.one-line {
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 95%;
+}
+
+/* RESPONSIVE */
+$phone-width: 576px;
+$lphone-width: 768px;
+$tablet-width: 1024px;
+$desktop-width: 1200px;
+$wide-desktop-width: 1280px;
+$hd-desktop-width: 1366px;
+$hdp-desktop-width: 1600px;
+$fhd-desktop-width: 1920px;
+$qhd-desktop-width: 2560px;
+$uhd-desktop-width: 3880px;
+
+/* Phone portrait */
+@mixin phone {
+    @media (max-width: #{$phone-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin phone-up {
+    @media (min-width: #{$phone-width + 1px}) {
+        @content;
+    }
+}
+
+/* Phone landscape */
+@mixin lphone {
+    @media (max-width: #{$lphone-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin lphone-up {
+    @media (min-width: $lphone-width) {
+        @content;
+    }
+}
+
+@mixin lphone-only {
+    @media (min-width: $phone-width) and (max-width: $lphone-width) {
+        @content;
+    }
+}
+
+/* Bigger phone landscape */
+@mixin lphone-big {
+    @media (min-width: $lphone-width) and (max-width: $tablet-width) and (orientation: landscape) {
+        @content;
+    }
+}
+
+/* Tablet portrait */
+@mixin tablet {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (min-width: $lphone-width) and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+/* Tablet landscape and small desktop - 1200px width */
+@mixin desktop {
+    @media (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin desktop-only {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+/* Wide desktop - 1280px width */
+@mixin wide-desktop {
+    @media (max-width: #{$wide-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin wide-desktop-up {
+    @media (min-width: $wide-desktop-width) {
+        @content;
+    }
+}
+
+@mixin wide-desktop-only {
+    @media (min-width: $desktop-width) and (max-width: $wide-desktop-width) {
+        @content;
+    }
+}
+
+/* HD desktop - 1366px width */
+@mixin hd-desktop {
+    @media (max-width: #{$hd-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin hd-desktop-up {
+    @media (min-width: $hd-desktop-width) {
+        @content;
+    }
+}
+
+@mixin hd-desktop-only {
+    @media (min-width: $wide-desktop-width) and (max-width: $hd-desktop-width) {
+        @content;
+    }
+}
+
+/* HD+ desktop  - 1600px width*/
+@mixin hdp-desktop {
+    @media (max-width: #{$hdp-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin hdp-desktop-up {
+    @media (min-width: $hdp-desktop-width) {
+        @content;
+    }
+}
+
+@mixin hdp-desktop-only {
+    @media (min-width: $hd-desktop-width) and (max-width: $hdp-desktop-width) {
+        @content;
+    }
+}
+
+/* FHD desktop  - 1920px width*/
+@mixin fhd-desktop {
+    @media (max-width: #{$fhd-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin fhd-desktop-up {
+    @media (min-width: $fhd-desktop-width) {
+        @content;
+    }
+}
+
+@mixin fhd-desktop-only {
+    @media (min-width: $hdp-desktop-width) and (max-width: $fhd-desktop-width) {
+        @content;
+    }
+}
+
+/* QHD desktop / 2K - 2560px width*/
+@mixin qhd-desktop {
+    @media (max-width: #{$qhd-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin qhd-desktop-up {
+    @media (min-width: $qhd-desktop-width) {
+        @content;
+    }
+}
+
+@mixin qhd-desktop-only {
+    @media (min-width: $fhd-desktop-width) and (max-width: $qhd-desktop-width) {
+        @content;
+    }
+}
+
+/* UHD desktop / 4K - 3880px width*/
+@mixin uhd-desktop {
+    @media (max-width: #{$uhd-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin uhd-desktop-up {
+    @media (min-width: $uhd-desktop-width) {
+        @content;
+    }
+}
+
+@mixin uhd-desktop-only {
+    @media (min-width: $qhd-desktop-width) and (max-width: $uhd-desktop-width) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+        @content;
+    }
+}
+
+@mixin mac16by10 {
+    @media (aspect-ratio: 16/10 ){
+        @content;
+    }
+
+}
+

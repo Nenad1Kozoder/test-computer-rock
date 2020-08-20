@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/jquery.datetimepicker.full.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/timer.jquery/0.7.0/timer.jquery.js"></script> -->
+    <script src="https://kit.fontawesome.com/067ae2a902.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="./js/custom.js"></script>
+    <title>Computer Rock - Test</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container grid">
+            <section id="profile" class="grid-item item-regular">
+                <div class="img-holder">
+                    <img src="images/Gillian-Thompson.jpg" alt="Gillian Thompson" />
+                </div>
+                <div class="text-field">
+                    <h1 class="section-title">Gillian Thompson</h1>
+                    <p>
+                        Cras mattis consectetur purus sit amet fermen. Morbi leo risus, porta ac consectetur ac,
+                        nulla delious vestibulum at eros mortam.
+                    </p>
+                </div>
+                <div class="botom-bar">
+                    <div class="item">
+                        <span class="num">527</span>
+                        <span class="item-title">Photos</span>
+                    </div>
+                    <div class="item">
+                        <span class="num">582,105</span>
+                        <span class="item-title">Folowers</span>
+                    </div>
+                    <div class="item">
+                        <span class="num">76</span>
+                        <span class="item-title">Following</span>
+                    </div>
+                </div>
+            </section>
+            <section id="album-cover" class="grid-item item-regular">
+                <img src="./images/Album-Cover.jpg" alt="Album Cover">
+                <div class="text-field text-center">
+                    <h1 class="section-title">I'm a Ruin</h1>
+                    <p>
+                        Marina and The Diamonds
+                    </p>
+                    <a href="#" id="aps-rig">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                </div>
+                <div class="botom-bar">
+                    <div id="progresbar">
+                        <div class="progres-fill animate"></div>
+                    </div>
+                    <div class="buttons">
+                        <a href="#" class="back-button"><i class="fas fa-step-backward"></i></a>
+                        <a href="#" class="play"><i class="fas fa-play"></i></a>
+                        <a href="#" class="pause inactive"><i class="fas fa-pause"></i></a>
+                        <a href="#" class="next-button"><i class="fas fa-step-forward"></i></a>
+                    </div>
+                </div>
+            </section>
+            <section id="account-login" class="grid-item item-regular">
+                <div class="text-field">
+                    <h1 class="section-title">Account Login</h1>
+                    <form>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                    </form>
+                </div>
+                <div class="botom-bar">
+                    <a href="#" class="pass-forg">Forgot your password?</a>
+                    <a href="#" class="button-item2">Login</a>
+                </div>
+            </section>
+            <section id="weather" class="grid-item item-extended">
+                <div class="data-holder">
+                    <img src="images/sun.png" alt="Sun">
+                    <span class="degree">31&#176</span>
+                    <span class="desc">Sunny all day</span>
+                </div>
+                <div class="link-holder">
+                    <a href="https://goo.gl/maps/iUjc2CEg2rc83iaRA" target="_blank">San Francisco, CA</a>
+                </div>
+            </section>
+            <section id="video-player" class="grid-item item-extended">
+                <div class="img-holder">
+                    <img src="images/video-photo.jpg" alt="Video photo">
+                </div>
+                <div class="player-field">
+                    <div class="buttons">
+                        <a href="#" class="play1"><i class="fas fa-play"></i></a>
+                        <a href="#" class="pause1 inactive"><i class="fas fa-pause"></i></a>
+                    </div>
+                    <div id="progres-field">
+                        <span class="duration-n">0:00</span>
+                        <div id="progresbar">
+                            <div class="progres-fill1 animate2"></div>
+                        </div>
+                        <span class="duration-o">1:27:41</span>
+                    </div>
+                </div>
+            </section>
+            <section id="latest-photos" class="grid-item item-extended">
+                <div class="text-field horisontal">
+                    <h1 class="section-title">Latest Photos</h1>
+                    <a href="#" class="show-more">See All <span>&raquo;</span></a>
+                </div>
+                <div class="gallery-field">
+                    <ul>
+                        <li class="duble-row"><a href="./images/gallery-1.jpg" data-fancybox="gallery"><img
+                                    src="./images/gallery-1.jpg" alt="gallery 1"></a></li>
+                        <li><a href="./images/gallery-2.jpg" data-fancybox="gallery"><img src="./images/gallery-2.jpg"
+                                    alt="gallery 2"></a></li>
+                        <li><a href="./images/gallery-3.jpg" data-fancybox="gallery"><img src="./images/gallery-3.jpg"
+                                    alt="gallery 3"></a></li>
+                        <li><a href="./images/gallery-4.jpg" data-fancybox="gallery"><img src="./images/gallery-4.jpg"
+                                    alt="gallery 4"></a></li>
+                        <li><a href="./images/gallery-5.jpg" data-fancybox="gallery"><img src="./images/gallery-5.jpg"
+                                    alt="gallery 5"></a></li>
+                        <li class="duble-row duble-coll"><a href="./images/gallery-6.jpg" data-fancybox="gallery"><img
+                                    src="./images/gallery-6.jpg" alt="gallery 6"></a></li>
+                        <li><a href="./images/gallery-7.jpg" data-fancybox="gallery"><img src="./images/gallery-7.jpg"
+                                    alt="gallery 7"></a></li>
+                        <li><a href="./images/gallery-8.jpg" data-fancybox="gallery"><img src="./images/gallery-8.jpg"
+                                    alt="gallery 8"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="settings" class="grid-item item-extended">
+                <div class="text-field horisontal">
+                    <h1 class="section-title">Settings</h1>
+                </div>
+                <form class="labels">
+                    <label>
+                        <span>Email Notifications</span>
+                        <input type="checkbox" checked="checked">
+                    </label>
+                    <label>
+                        <span>Automatically Logout</span>
+                        <input type="checkbox">
+                    </label>
+                    <label>
+                        <span>Show Full Names</span>
+                        <input type="checkbox">
+                    </label>
+                    <label>
+                        <span>Show Ads</span>
+                        <input type="checkbox">
+                    </label>
+                    <label>
+                        <span>Sharing Features</span>
+                        <input type="checkbox" checked="checked">
+                    </label>
+                    <label>
+                        <span>Allow Multiple Uploads</span>
+                        <input type="checkbox" checked="checked">
+                    </label>
+                </form>
+                <div class="botom-bar">
+                    <a href="#" class="button-text reset">Reset to Default</a>
+                    <a href="#" class="button-item2">Save</a>
+                </div>
+            </section>
+            <section id="publish-photos" class="grid-item item-regular">
+                <img src="images/Photos-Icon.png" alt="Publish Photos">
+                <div class="text-field">
+                    <h1 class="section-title">Publish Photos</h1>
+                    <p>
+                        Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient
+                        montes, nascetur mus.
+                    </p>
+                </div>
+                <div class="botom-bar">
+                    <a href="#" class="button-item cancel">Cancel</a>
+                    <a href="#" class="button-item publish active">Publish</a>
+                </div>
+            </section>
+            <section id="calendar" class="grid-item item-regular">
+                <div class="date-holder">
+                    <span class="day-holder"><span class="day-num">23</span>th</span>
+                </div>
+                <input id="datetimepicker" type="text">
+            </section>
+            <section id="chart" class="grid-item item-regular">
+                <div class="chart-holder">
+                    <ul class="ul-side">
+                        <li>100K</li>
+                        <li>80K</li>
+                        <li>60K</li>
+                        <li>40K</li>
+                        <li>20K</li>
+                        <li>10K</li>
+                        <li>0</li>
+                    </ul>
+                    <div class="cart-field"><canvas id="myCanvas" width="220" height="170"></canvas></div>
+                    <ul class="ul-bottom">
+                        <li>dec</li>
+                        <li>jan</li>
+                        <li>feb</li>
+                        <li>mar</li>
+                    </ul>
+                </div>
+                </canvas>
+                <div class="botom-bar">
+                    <div class="item">
+                        <span class="num">9,520.53</span>
+                        <span class="item-title">Grose Profits</span>
+                    </div>
+                    <div class="item">
+                        <span class="num">5,436.82</span>
+                        <span class="item-title">Net Profits</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
